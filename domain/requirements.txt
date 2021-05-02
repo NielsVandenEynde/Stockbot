@@ -1,0 +1,7 @@
+urllib3
+bs4
+requests
+forex-python
+os
+discord
+json
