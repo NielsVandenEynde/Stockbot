@@ -27,8 +27,8 @@ class user:
                 return 0
         return 1
 
-    def getTotalValue(self,euroPrice):
+    def getTotalValue(self):
         value=0
         for stock in self.stocks:
-            value+=stock.amount*euroPrice
+            value+=stock.amount*helperFunctions.convertToEuro(helperFunctions.get_stock_price(stock.ticker))
         return round(value,2)

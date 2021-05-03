@@ -39,7 +39,7 @@ async def portfolio(ctx):
         price=helperFunctions.get_stock_price(stock.ticker)
         euroPrice=helperFunctions.convertToEuro(price)
         embed.add_field(name=f'**{stock.ticker.upper()}**', value=f'> Amount: {stock.amount}\n> Cost base: ${stock.costbase}\n> Current price: ${price}\n> Current value: €{round(euroPrice*stock.amount,2)}',inline=False)
-    embed.set_footer(text=f'**Total value: €{repo.users[str(ctx.message.author.id)].getTotalValue(euroPrice)}**')
+    embed.set_footer(text=f'**Total value: €{repo.users[str(ctx.message.author.id)].getTotalValue()}**')
     await ctx.send(embed=embed)
 
 @bot.command(name="sell", help="sells some of the stock")
