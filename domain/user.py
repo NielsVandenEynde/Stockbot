@@ -4,6 +4,7 @@ class user:
 
     def __init__(self, stocks=[]):
         self.stocks=stocks
+        self.cash=0
     
     def addStock(self, ticker, amount, price):
         for s in self.stocks:
